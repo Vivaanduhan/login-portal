@@ -1,0 +1,13 @@
+<div class="signup-container">
+  <h2>Create Account</h2>
+  <input [(ngModel)]="username" placeholder="Username">
+  <input [(ngModel)]="email" type="email" placeholder="Email">
+  <input [(ngModel)]="password" type="password" placeholder="Password">
+  <input [(ngModel)]="confirmPassword" type="password" placeholder="Confirm Password">
+  <div class="password-mismatch" 
+       *ngIf="password && confirmPassword && password !== confirmPassword">
+    Passwords don't match!
+  </div>
+  <button (click)="signup()">CREATE ACCOUNT</button>
+  <p>Already have an account? <a routerLink="/login">Sign in</a></p>
+</div>
